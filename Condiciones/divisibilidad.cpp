@@ -2,18 +2,23 @@
 
 using namespace std;
 
-void DivisibleCuatro(int);
+void Bisiesto(int);
 
 int main()
 {
     cout << "\tBucles\n" << endl;
-    DivisibleCuatro(4);
-     DivisibleCuatro(100);
+
+    Bisiesto(2000);
 }
 
-void DivisibleCuatro(int n){
-    if(n%4==0)
-        cout<<"\t"<<n<<" , SI es divisible por 4\n";
-    else
-        cout<<"\t"<<n<<" , NO es divisible por 4";
+void Bisiesto(int n){
+    if(n<1970){
+        cout<<"Ingrese un anio valido";
+    }
+    else{
+        if(n%4==0)
+            cout<<"\t"<<n<<" , ES bisiesto\n";
+        else
+            cout<<"\t"<<n<<" , NO es bisiesto";
+    }
 }
